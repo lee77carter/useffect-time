@@ -1,7 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Clock() {
   const [time, setTime] = useState(new Date());
+
+  useEffect(() => {
+    const timeInterval = window.setInterval(() => {
+      setTime(new Date());
+      console.log("in timeInterval");
+    }, 1000);
+    return () => {
+      console.log("in cleanup");
+      window.clearInterval(timeInterval);
+    };
+  }, []);
 
   return (
     <p className="clock">
