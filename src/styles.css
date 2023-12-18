@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.3;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+.App {
+  margin: 50px auto;
+  max-width: 250px;
+  position: relative;
+}
+.clock {
+  font-size: 2rem;
+  font-family: monospace;
+  font-variant-numeric: tabular-nums;
+}
+.clock-toggle {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 40px;
+  margin: auto;
+  padding: 0.3rem 0;
+  width: 150px;
+}
